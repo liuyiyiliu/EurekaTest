@@ -1,0 +1,18 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/inspectionProfiles/
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+eureka-demo/src/main/resources/static/
+eureka-demo/src/main/resources/templates/
+user-consumer/src/main/resources/static/
+user-consumer/src/main/resources/templates/
+user-service/src/main/resources/static/
+user-service/src/main/resources/templates/
+src/main/resources/static/
+src/main/resources/templates/
+/user-service/.mvn/

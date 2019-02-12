@@ -4,7 +4,7 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:mysql://localhost:3306/day03
+    url: jdbc:mysql://localhost:3306/mybatis
     username: root
     password: yi123
     hikari:
@@ -21,6 +21,6 @@ eureka:
     service-url:
           defaultZone: http://127.0.0.1:10086/eureka
   instance:
-    lease-expiration-duration-in-seconds: 20  # 最长保留时间如果超过20秒没有发送心跳，
-    lease-renewal-interval-in-seconds:  10 #每10秒续约注册中心，每个10秒服务会向注册中心发送一次心跳，证明自己还活着
+    lease-expiration-duration-in-seconds: 20  # 最长保留时间如果超过20秒没有发送心跳
+    lease-renewal-interval-in-seconds:  10  # 每10秒续约注册中心，每个10秒服务会向注册中心发送一次心跳，证明自己还活着
     instance-id: ${spring.application.name}:${server.port}

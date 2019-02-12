@@ -12,14 +12,17 @@ import java.util.List;
 public class UserService {
 
     @Autowired
-    private UserDao userDao;
+    private UserFeignClient client;
+   // private UserDao userDao;
 
     public List<User> queryUserByids(List<Long> ids){
         List<User> users = new ArrayList<>();
-        for (Long id : ids){
-            User user = this.userDao.queryByid(id);
-            users.add(user);
-        }
+//        for (Long id : ids){
+//            User user = this.userDao.queryByid(id);
+//            users.add(user);
+//        }
+        // 我们测试多次查询，
+        ids.forEach(id ->users.add(this.client.queryUserById(id)));
         return  users;
     }
 }
